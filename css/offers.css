@@ -1,0 +1,25 @@
+.search{
+    margin: 1rem;
+    display: flex;
+}
+.search button, .search select{
+    background: transparent;
+    border: 2px solid var(--border);
+    padding: 0.5rem 0.75rem;
+    margin: 0.5rem 0.5rem;
+    border-radius: 5px;
+    outline: 0;
+    font-weight: 600;
+}
+.search select{
+    width: 100%;
+}
+.search select:focus{
+    border: 2px solid rgba(44, 44, 255, 0.8);
+}
+select option{
+    background-color: var(--background);
+}
+.search button:hover, .search button:focus{
+    background-color: var(--green);
+}

@@ -1,0 +1,452 @@
+:root{
+    --background: #0c121e;
+    --background-claro:#172030;
+    --white:#fefefe;
+    --green:#019750;
+    --block:#1b2330;
+    --border:#1e2d38;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Be Vietnam", sans-serif;
+    color: var(--white);
+}
+a{
+    text-decoration: 0;
+    color: var(--white);
+}
+body{
+    background: var(--background);
+}
+header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: var(--background);
+    z-index: 1;
+}
+header>a>img{
+    width: 50px;
+    height: 50px;
+    background: white;
+}
+main{
+    height: 100%;
+}
+/*Navbar*/
+.custom-toggler{
+    border: 2px solid var(--green);
+    padding: 0.5rem 0.75rem;
+}
+.custom-toggler span{
+    display: flex;
+    align-items: center;
+}
+.custom-toggler i {
+    color: var(--green);
+    transform: scale(1.5);
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+}
+.custom-icon{
+    display: flex;
+    align-items: center;
+}
+.navbar-nav{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+.nav-link{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.nav-link:hover{
+    color: var(--green);
+}
+.navbar-brand{
+    background-image: url(../Design/Desktop/imagens/logo.svg);
+    background-position: center;
+    background-size: cover;
+    width: 125px;
+    height: 30px;
+}
+.active .nav-link{
+    color: var(--green);
+}
+.active .nav-link::before{
+    content: '';
+    background-image: url(../Design/Desktop/imagens/tridente_menu.svg);
+    width: 25px;
+    height: 12px;
+    display: block;
+    margin: auto 0.5rem;
+}
+.disabled .nav-link::after{
+    content: 'soon';
+    background: var(--green);
+    padding: 0.5px 4px;
+    font-size: 0.6rem;
+    border-radius: 0.3rem;
+    margin-left: 5px;
+}
+.disabled .nav-link:hover{
+    color: var(--white);
+    cursor: not-allowed;
+}
+
+/* Seção cassino */
+#casinos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0rem 2rem;
+}
+#casinos p{
+    margin: 0;
+    font-size: 1.2rem;
+}
+#casinos a, span{
+    color: var(--green);
+    text-decoration: none;
+    transition: filter 0.2s;
+}
+a:hover{
+    filter: brightness(0.9);
+}
+.title{
+    text-align: center;
+    margin: 3rem 0;
+    padding-top: 4.7rem;
+}
+.hidden{
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    font-size: 6rem;
+    font-weight: 800;
+    color: rgba(255, 255, 255, 0.1);
+}
+
+.space{
+    padding: 0.8rem 1.3rem;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: linear-gradient(
+        90deg,
+        var(--background) 0%,
+        var(--background-claro)50%)
+    ;
+    margin-bottom: 1.5rem;
+}
+.space>div{
+    display: flex;
+    height: 100%;
+}
+.spaceDiv1,.spaceDiv2{
+    display: flex;
+}
+.spaceDiv1>div,.spaceDiv2>div{
+    display: flex;
+    flex-direction: column;
+}
+
+.logo{
+    padding: 0.5rem;
+    background: var(--white);
+    border-radius: 10px;
+}
+.logo img{
+    width: 5rem;
+}
+.name, .porcent,.spins,.wager,.minDeposit,.signUp{
+    border-right: 1px solid var(--border);
+}
+.name{
+    padding: 0 0.5rem;
+}
+.name h1{
+    font-size: 1rem;
+}
+.porcent,.spins,.wager,.minDeposit,.signUp,.maxBet{
+    text-align: center;
+    padding: 0 0.5rem;
+}
+.porcent p{
+    font-weight: 600;
+}
+.info button{
+    background: 0;
+    outline: 0;
+    border: 0;
+}
+.info button:hover{
+    cursor: pointer;
+}
+.info img{
+    width: 2rem;
+    margin-left: 1rem;
+    margin-top: 0.5rem;
+}
+.button button{
+    background-color: var(--green);
+    padding: 0.5rem 1.5rem;
+    border: 0;
+    outline: 0;
+    border-radius: 0.5rem;
+    transition: filter 0.2s;
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;
+}
+.button button:hover{
+    filter: brightness(0.9);
+}
+#casinos>button{
+    background: 0;
+    border: 0;
+    outline: 0;
+    margin-bottom: 5rem;
+}
+#casinos>button a{
+    background-color: transparent;
+    padding: 0.5rem 1.5rem;
+    border: 2px solid var(--green);
+    outline: 0;
+    border-radius: 0.5rem;
+    font-weight: 600;
+}
+#casinos>button a:hover{
+    background: var(--green);
+    color: var(--background);
+}
+.acordiao{
+    padding: 1rem 1.5rem;
+    margin: 2.5rem 0;
+}
+.acordiao >div:first-child{
+    padding: 0 1rem;
+    border-right: 1px solid var(--border);
+}
+.acordiao>div .hidden{
+    padding-left: 1rem;
+    font-size: 3.5rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.acordiao>div p{
+    padding: 0.5rem 0;
+    font-size: 1rem;
+}
+.subsc{
+    padding-top: 2.5rem ;
+}
+.acordiao>div strong{ 
+    font-size: 1rem;
+}
+.acordiao>div ul{
+    padding-left: 1rem;
+}
+
+/* Rodapé */
+footer{
+    background-color: var(--background-claro);
+}
+.infoFooter{
+    padding-top: 8rem;
+    padding-bottom: 2rem;
+}
+.footerL{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.footerL img{
+    width: 150px;
+}
+.footerL div>div{
+    display: flex;
+    flex-direction: column;
+}
+.footerL div>div h4{
+    font-size: 1.2rem;
+    font-weight: 800;
+    margin: 1rem 0;
+}
+.footerL div>div a{
+    margin: 0.5rem 0;
+}
+.infoFooter a:hover{
+    color: var(--green);
+    text-decoration: none;
+}
+.infoFooter .soon:hover{
+    cursor:not-allowed;
+    color: white;
+}
+.soon::after{
+    content: 'soon';
+    background: var(--green);
+    padding: 0.5px 4px;
+    font-size: 0.6rem;
+    border-radius: 0.3rem;
+    margin-left: 5px;
+}
+.footerR{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.footerR h1{
+    font-size: 4rem;
+}
+.gaming{
+    margin-top: 3rem;
+}
+.config{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding-right: 1.5rem;
+}
+.config span{
+    margin-right: auto;
+}
+.config img{
+    width: 150px;
+    height: 30px;
+}
+/*  Transição   */
+.transicao{
+    background: url(/Design/Desktop/imagens/transicao.svg)
+    no-repeat center;
+    background-position: top;
+    width: 100%;
+    height: 100px;
+    position: relative;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+/*responsividade*/
+@media screen and (max-width:1080px){
+    html{
+        font-size: 91.25%;
+    }
+    .spaceDiv2 .spins{
+        display: none;
+    }
+}
+@media screen and (max-width:990px){
+    html{
+        font-size: 91.25%;
+    }
+    .title{
+        padding-top: 3.5rem;
+    }
+    .hidden{
+        font-size: 5rem;
+    }
+    .space{
+        flex-direction: column;
+    }
+    .spaceDiv1{
+        margin-bottom: 0.3rem;
+    }
+    .name{
+        border:0;
+        flex: 1;
+    }
+    .info{
+        position: absolute;
+        right: 1rem;
+        top: 10px;
+    }
+    .spins{
+        display: none;
+    }
+    .space>div{
+        flex-direction: column;
+    }
+    .acordiao >div:first-child{
+        border: 0;
+        border-bottom: 1px solid var(--border);
+    }
+}
+@media screen and (max-width:780px){
+    html{
+        font-size: 81.25%;
+    }
+    .title{
+        padding-top: 3.5rem;
+    }
+    .hidden{
+        font-size: 4rem;
+    }
+    .space{
+        width: 100%;
+    }
+    .button{
+        margin-left: auto;
+    }
+    .info{
+        position: absolute;
+        right: 1rem;
+        top: 10px;
+    }
+    div.minDeposit{
+        display: none;
+    }
+    .infoFooter{
+        padding-top: 2rem;
+    }
+    
+}
+@media(max-width:550px){
+    div.maxBet{
+        display: none;
+    }
+    .signUp{
+        border: 0;
+    }
+    
+}
+@media(max-width:450px){
+    html{
+        font-size: 91.25%;
+    }
+    .title{
+        padding-top: 2rem;
+    }
+    .hidden{
+        font-size: 3rem;
+    }
+    div.wager{
+        display: none;
+    }
+    .infoFooter{
+        padding-top: 2rem;
+    }
+    .acordiao>div .hidden{
+        font-size: 2rem;
+    }
+    
+}
